@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+用户获取指定报告:
+<div>
+
+    <form action="{% url 'report:user_get_specific_report' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        问卷id：<input type="text" name="questionnaire_id" id="questionnaire_id"><br>
+        用户id：<input type="text" name="user_id" id="user_id"><br>
+        项目id：<input type="text" name="assess_project_id" id="assess_project_id"><br>
+        报告模型：<input type="text" name="report_type_id" id="report_type_id"><br>
+
+
+        <input type="submit" name="" value="获取报告" class="info_submit"
+               style="font-size: 15px;background: #5cb85c">
+    </form>
+</div>
+</body>
+</html>

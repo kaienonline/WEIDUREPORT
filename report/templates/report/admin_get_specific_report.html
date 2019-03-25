@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+管理员获取指定报告函数:
+<div>
+
+    <form action="{% url 'report:admin_get_specific_report' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <li>用户id:<input type="text" name="user_id" id="user_id"></li>
+        <li>问卷id：<input type="text" name="questionnaire_id" id="questionnaire_id"></li>
+
+
+        <input type="submit" name="" value="获取报告" class="info_submit"
+               style="font-size: 15px;background: #5cb85c">
+    </form>
+</div>
+</body>
+</html>

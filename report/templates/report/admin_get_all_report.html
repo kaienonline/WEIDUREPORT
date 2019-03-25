@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+管理员获取所有用户报告:
+<div>
+{% for i in user_report_list %}
+
+    <h4 style="color: green; font-size:16px">
+        <li>报告状态：{{ i.status }}</li>
+        <li>报告下载地址：{{ i.url }}</li>
+    </h4>
+{% empty %}
+    <tr>
+    <h4 style="color: green; font-size:16px">
+        暂无信息
+    </h4>
+
+    </tr>
+{% endfor %}
+</div>
+</body>
+</html>
